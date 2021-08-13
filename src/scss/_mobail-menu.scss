@@ -1,0 +1,105 @@
+@media (max-width: $sm) {
+  .mobile-menu {
+    align-items: center;
+    padding: 0 22px;
+    &__btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 30px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    &__icon {
+      display: block;
+      position: relative;
+      background: linear-gradient(to left, $white 70%, #0000 30%);
+      width: 70%;
+      height: 2px;
+      transition: 0.4s;
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 2px;
+        transition: 0.4s;
+      }
+      &::after {
+        top: 8px;
+        width: 100%;
+        background: linear-gradient(to left, $white 50%, #0000 50%);
+      }
+      &::before {
+        top: -8px;
+        width: 100%;
+        background: $white;
+      }
+    }
+    &__container {
+      position: fixed;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      height: 0;
+      opacity: 1;
+      transition: 0.5s;
+      transition-delay: 0.2s;
+      overflow: hidden;
+      background-color: $broun;
+    }
+    &__list {
+      transition: 0.5s;
+      transition-delay: 0.5s;
+      list-style: none;
+      padding-left: 0;
+      margin-top: 300px;
+    }
+    &__item {
+      font-size: 26px;
+      padding-bottom: 15px;
+    }
+    &__link {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+    &__checkbox {
+      display: none;
+    }
+    &__checkbox:checked ~ &__nav {
+      opacity: 1;
+      transition-delay: 0s;
+    }
+    &__checkbox:checked ~ &__container {
+      height: 100%;
+      transition-delay: 0s;
+    }
+    &__checkbox:checked ~ &__btn &__icon {
+      background: transparent;
+    }
+    &__checkbox:checked ~ &__btn &__icon::before,
+    &__checkbox:checked ~ &__btn &__icon::after {
+      top: 0;
+      z-index: 99999;
+    }
+    &__checkbox:checked ~ &__btn &__icon::after {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      background: $white;
+    }
+    &__checkbox:checked ~ &__btn &__icon::before {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      background: $white;
+    }
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+}

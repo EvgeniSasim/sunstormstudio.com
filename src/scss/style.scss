@@ -1,0 +1,382 @@
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "base/const";
+@import "base/*.scss";
+@import "global/*.scss";
+@import "**/_*.scss";
+@import "../components/**/*.scss";
+@import "./mobail-menu.scss";
+.contents {
+  .contain {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    font-size: 18px;
+    gap: 3rem;
+    @media (max-width: $sm) {
+      flex-direction: column;
+    }
+  }
+  &__items {
+    @include flex-row;
+    gap: 1rem;
+    flex: 1;
+    .content-logo {
+      img {
+        width: 90px;
+        @media (max-width: $sm) {
+          width: 45px;
+        }
+      }
+    }
+    .content-text {
+      padding-top: 50px;
+      color: $white;
+      @media (max-width: $sm) {
+        padding-top: 25px;
+      }
+      p {
+        text-indent: 30px;
+        span {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+.services {
+  padding-top: 100px;
+  color: $white;
+  font-size: 20px;
+  h3 {
+    text-align: left;
+    color: $yellow;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .content-text ul li {
+    list-style: none;
+  }
+  .content-text ul li::before {
+    content: "– ";
+    color: $white;
+  }
+  .services__itemLest {
+    display: flex;
+    flex-direction: row-reverse;
+    @media (max-width: $sm) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .content-picture {
+      @include flex-row;
+      width: 50%;
+      justify-content: flex-end;
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .content-text {
+      width: 50%;
+      padding-left: 150px;
+      @media (max-width: $md) {
+        padding-left: 80px;
+        padding-bottom: 20px;
+      }
+      @media (max-width: $sm) {
+        padding-left: 0px;
+        width: 100%;
+        @include flex-row;
+        justify-content: center;
+        gap: 10%;
+      }
+      @media (max-width: $xs) {
+        padding-left: 0px;
+        width: 100%;
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+      }
+      .cervises-btn {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $xs) {
+          margin-top: 0px;
+        }
+      }
+      button {
+        background-color: $yellow;
+        width: 100%;
+        text-align: center;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 0;
+        color: $black;
+        font-size: 28px;
+        font-weight: 400;
+        max-width: 320px;
+        margin-top: 50px;
+      }
+    }
+    div.plus__send.content-text {
+      @media (max-width: $sm) {
+        flex-wrap: wrap;
+        gap: 5%;
+        h3 {
+          width: 46%;
+        }
+        div {
+          width: 46%;
+        }
+      }
+      @media (max-width: $xs) {
+        h3 {
+          width: 100%;
+        }
+        div {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .services__itemRight {
+    @include flex-row;
+    @media (max-width: $sm) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .content-picture {
+      @include flex-row;
+      justify-content: flex-start;
+      width: 50%;
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .content-text {
+      width: 50%;
+      padding-left: 150px;
+      @media (max-width: $md) {
+        padding-left: 80px;
+        padding-bottom: 20px;
+      }
+      @media (max-width: $sm) {
+        padding-left: 0px;
+        width: 100%;
+        @include flex-row;
+        justify-content: center;
+        gap: 10%;
+      }
+      @media (max-width: $xs) {
+        padding-left: 0px;
+        width: 100%;
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+.contact-us {
+  .contain {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 150px;
+    font-size: 18px;
+    gap: 3rem;
+    @media (max-width: $sm) {
+      @include flex-column;
+      gap: 0;
+    }
+    @media (max-width: $xs) {
+      padding-top: 70px;
+    }
+  }
+  &__items {
+    @include flex-row;
+    width: 50%;
+    gap: 1rem;
+    align-self: flex-start;
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+    .content-logo {
+      img {
+        width: 90px;
+      }
+    }
+    .content-text {
+      padding-top: 50px;
+      color: $white;
+      padding-bottom: 100px;
+      @media (max-width: $sm) {
+        padding-bottom: 20px;
+      }
+      h4.contact-title {
+        padding-bottom: 20px;
+        color: $yellow;
+        text-indent: 30px;
+      }
+      p {
+        text-indent: 30px;
+        span {
+          color: $orange;
+        }
+      }
+      .tell-email {
+        @include flex-row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 50px;
+      }
+    }
+    .contact-form {
+      padding-top: 50px;
+      input {
+        width: 100%;
+        background-color: $broun;
+        border: solid 1px lightgrey;
+        margin-bottom: 20px;
+        color: $white;
+        padding: 5px 0 5px 20px;
+        &::placeholder {
+          color: $white;
+        }
+      }
+      textarea {
+        width: 100%;
+        border: solid 1px lightgrey;
+        background-color: $broun;
+        color: $white;
+        padding: 5px 0 5px 20px;
+        &::placeholder {
+          color: $white;
+        }
+      }
+      button {
+        background-color: $yellow;
+        width: 100%;
+        text-align: center;
+        border: none;
+        padding: 10px 0;
+        text-transform: uppercase;
+        color: $black;
+        font-weight: 600;
+      }
+    }
+  }
+  div.contact-us__items.logo {
+    @media (max-width: $sm) {
+      @include flex-column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+footer {
+  @include flex-row;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  span {
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 50%;
+  right: 35%;
+  z-index: 9;
+  box-shadow: 0px 0px 71px 500px rgba(255, 204, 0, 0.28);
+  @media (max-width: $sm) {
+    bottom: 20%;
+    right: 15%;
+  }
+}
+.contact-us__forms.form-popup form {
+  background: $broun;
+  position: relative;
+  @include flex-column;
+  align-items: center;
+  background: $broun;
+  border-radius: 10px;
+  padding: 5px;
+  max-width: 255px;
+  text-align: center;
+  .form__title {
+    color: $white;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 16px 20px 11px 20px;
+    &.second_form {
+      padding: 16px 8px 11px 8px;
+    }
+  }
+  .input__title {
+    align-self: flex-start;
+    padding-left: 20px;
+    padding-top: 22px;
+    color: $orange;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .btn-myprimary {
+    background-color: $yellow;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 60px;
+    text-transform: uppercase;
+    color: $black;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 27px;
+    margin-top: 37px;
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    border-bottom: solid 1px $orange;
+    width: 180px;
+    color: $white;
+  }
+  input::placeholder {
+    color: $white;
+  }
+}
+.contact-us__forms.form-popup {
+  margin: 0;
+  padding: 0;
+}
+.contact-us__forms.form-popup button.close {
+  position: absolute;
+  top: -50px;
+  right: -26px;
+  min-width: 35px;
+  padding: 4px;
+  border-radius: 100%;
+}

@@ -1,0 +1,88 @@
+header {
+  .contain {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    .logo {
+      flex: 1;
+      @media (max-width: $sm) {
+        flex: 2;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    /*nav {
+            @include flex-row;
+            align-items:center;
+            justify-content: center;s
+            flex: 2;
+            width: 90%;
+            a {
+                    color: $white;
+                    padding-right: 0;
+                }
+            a:nth-last-child(n+2) {
+                padding-right: 3%;
+                }
+
+        }*/
+    nav.mobile-menu {
+      @include flex-row;
+      align-items: center;
+      justify-content: center;
+      flex: 2;
+      @media (max-width: $sm) {
+        justify-content: flex-end;
+        flex: 1;
+      }
+      .mobile-menu__container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $sm) {
+          justify-content: center;
+        }
+        ul {
+          display: contents;
+          list-style: none;
+          @media (max-width: $sm) {
+            @include flex-column;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      input {
+        display: none;
+      }
+      label,
+      label div {
+        display: none;
+        @media (max-width: $sm) {
+          display: inherit;
+        }
+      }
+      li {
+        color: $white;
+        padding-right: 0;
+      }
+      li:nth-last-child(n + 2) {
+        padding-right: 3%;
+      }
+      a {
+        color: $white;
+        padding-right: 0;
+      }
+    }
+    .mobile-menu__item {
+      font-size: 20px;
+      @media (max-width: $md) {
+        font-size: 16px;
+      }
+    }
+  }
+}
